@@ -1,6 +1,9 @@
 # Velora Ecommerce - Git Ignore File
 
-# Sensitive Credentials & Local Config
+# Sensitive Environment Variables
+.env
+.env.*
+backend/config/.env
 backend/config/.env.php
 
 # Operating System & IDE Files

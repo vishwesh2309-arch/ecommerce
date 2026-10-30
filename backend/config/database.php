@@ -3,8 +3,10 @@ declare(strict_types=1);
 
 /**
  * Velora — Supabase PostgreSQL connection
- * Supports both local config/.env.php and Cloud Environment Variables (Render/Docker)
+ * Supports root `.env`, backend/config/.env.php, and Cloud Environment Variables (Render/Docker)
  */
+
+require_once __DIR__ . '/../includes/env-loader.php';
 
 $configFile = __DIR__ . '/.env.php';
 $dbConfig = is_file($configFile) ? (require $configFile) : [];
@@ -17,7 +19,7 @@ $password = (string) (getenv('DB_PASSWORD') ?: ($dbConfig['password'] ?? ''));
 
 if ($host === '' || $username === '' || $password === '') {
     throw new RuntimeException(
-        'Missing database configuration values. Set DB_HOST, DB_USER, DB_PASSWORD environment variables or config/.env.php'
+        'Missing database configuration values. Set DB_HOST, DB_USER, DB_PASSWORD in .env or environment variables.'
     );
 }
 

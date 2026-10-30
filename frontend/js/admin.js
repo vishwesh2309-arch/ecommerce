@@ -4,7 +4,11 @@
 // =========================================
 async function verifyAdminAuth() {
     try {
-        const res = await fetch('../backend/api/admin-session.php', {
+        const apiPath = window.location.pathname.includes('/velora-ecommerce/')
+            ? '../backend/api/admin-session.php'
+            : '/api/admin-session.php';
+
+        const res = await fetch(apiPath, {
             method: 'GET',
             credentials: 'same-origin',
             cache: 'no-store',
@@ -13,7 +17,6 @@ async function verifyAdminAuth() {
         if (res.ok) {
             const data = await res.json();
             if (!data.authenticated || !data.isAdmin) {
-                // If not signed in as admin, redirect to admin-login.html
                 window.location.href = 'admin-login.html';
                 return;
             }

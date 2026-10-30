@@ -3,31 +3,23 @@ declare(strict_types=1);
 
 /**
  * Velora — Supabase PostgreSQL connection
+ * Supports both local config/.env.php and Cloud Environment Variables (Render/Docker)
  */
 
 $configFile = __DIR__ . '/.env.php';
+$dbConfig = is_file($configFile) ? (require $configFile) : [];
 
-if (!is_file($configFile)) {
+$host = (string) (getenv('DB_HOST') ?: ($dbConfig['host'] ?? ''));
+$port = (int) (getenv('DB_PORT') ?: ($dbConfig['port'] ?? 5432));
+$database = (string) (getenv('DB_NAME') ?: ($dbConfig['database'] ?? 'postgres'));
+$username = (string) (getenv('DB_USER') ?: ($dbConfig['username'] ?? ''));
+$password = (string) (getenv('DB_PASSWORD') ?: ($dbConfig['password'] ?? ''));
+
+if ($host === '' || $username === '' || $password === '') {
     throw new RuntimeException(
-        'Missing config/.env.php file.'
+        'Missing database configuration values. Set DB_HOST, DB_USER, DB_PASSWORD environment variables or config/.env.php'
     );
 }
-
-$dbConfig = require $configFile;
-
-foreach (['host', 'port', 'database', 'username', 'password'] as $key) {
-    if (!isset($dbConfig[$key]) || $dbConfig[$key] === '') {
-        throw new RuntimeException(
-            'Missing database configuration value: ' . $key
-        );
-    }
-}
-
-$host = (string) $dbConfig['host'];
-$port = (int) $dbConfig['port'];
-$database = (string) $dbConfig['database'];
-$username = (string) $dbConfig['username'];
-$password = (string) $dbConfig['password'];
 
 if ($port < 1 || $port > 65535) {
     throw new RuntimeException('Invalid database port.');
@@ -48,10 +40,8 @@ try {
         [
             PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
             PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
-            PDO::ATTR_EMULATE_PREPARES => false,
             PDO::ATTR_TIMEOUT => 10,
-            PDO::ATTR_PERSISTENT => true,
-    ]
+        ]
     );
 } catch (PDOException $exception) {
     error_log(
@@ -60,7 +50,6 @@ try {
     );
 
     throw new RuntimeException(
-        'Could not connect to the Velora database. ' .
-        'Check the PHP error log.'
+        'Could not connect to the Velora database. Check the server logs.'
     );
 }

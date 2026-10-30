@@ -28,7 +28,7 @@ try {
     $config = require __DIR__ . '/../config/.env.php';
 
     $supabaseUrl = rtrim(
-        (string) ($config['supabase_url'] ?? ''),
+        (string) (getenv('SUPABASE_URL') ?: ($config['supabase_url'] ?? '')),
         '/'
     );
 

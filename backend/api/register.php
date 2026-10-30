@@ -22,18 +22,10 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
 }
 
 $configFile = dirname(__DIR__) . '/config/.env.php';
-
-if (!is_file($configFile)) {
-    respond(500, [
-        'success' => false,
-        'message' => 'Server configuration is missing.'
-    ]);
-}
-
-$config = require $configFile;
+$config = is_file($configFile) ? (require $configFile) : [];
 
 $supabaseUrl = rtrim(
-    (string) ($config['supabase_url'] ?? ''),
+    (string) (getenv('SUPABASE_URL') ?: ($config['supabase_url'] ?? '')),
     '/'
 );
 $publishableKey = (string) (

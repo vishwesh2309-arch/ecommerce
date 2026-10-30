@@ -50,3 +50,4 @@ if (!function_exists('loadVeloraEnv')) {
 
 // Load environment variables immediately
 loadVeloraEnv();
+

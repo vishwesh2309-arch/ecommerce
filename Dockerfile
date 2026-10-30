@@ -24,3 +24,4 @@ COPY . /var/www/html/
 
 # Expose standard web port
 EXPOSE 80
+

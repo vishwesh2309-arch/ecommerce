@@ -1,19 +1,25 @@
 <IfModule mod_rewrite.c>
     RewriteEngine On
 
-    # 1. Route API requests: /api/* -> backend/api/*
+    # 1. Clean up '/velora-ecommerce/' prefix if someone visits old bookmark or URL
+    RewriteRule ^velora-ecommerce/(.*)$ /$1 [R=301,L]
+
+    # 2. Route API requests: /api/* -> backend/api/*
     RewriteRule ^api/(.*)$ backend/api/$1 [L,QSA]
 
-    # 2. Directly serve existing files from root, frontend, or backend
-    RewriteCond %{REQUEST_FILENAME} -f
-    RewriteRule ^ - [L]
+    # 3. Route root / directly to index.php which serves the Storefront UI
+    RewriteRule ^$ index.php [L]
 
-    # 3. If file exists in frontend/ directory, serve it transparently
+    # 4. If file exists in frontend/, serve it transparently
     RewriteCond %{DOCUMENT_ROOT}/frontend/$1 -f [OR]
     RewriteCond %{DOCUMENT_ROOT}/frontend/$1 -d
     RewriteRule ^(.*)$ frontend/$1 [L,QSA]
 
-    # 4. Fallback everything else through universal index.php
+    # 5. Direct file match
+    RewriteCond %{REQUEST_FILENAME} -f
+    RewriteRule ^ - [L]
+
+    # 6. Fallback everything else through universal index.php
     RewriteCond %{REQUEST_FILENAME} !-f
     RewriteCond %{REQUEST_FILENAME} !-d
     RewriteRule ^(.*)$ index.php [L,QSA]

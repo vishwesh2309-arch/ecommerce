@@ -5,15 +5,19 @@ declare(strict_types=1);
  * Velora Universal Router (Production + Local Development)
  * When opening the root URL (e.g. on Render or custom domain),
  * it serves the storefront UI immediately.
+ * Also seamlessly redirects any requests containing '/velora-ecommerce/' to the root.
  */
 
 $uri = parse_url($_SERVER['REQUEST_URI'] ?? '/', PHP_URL_PATH);
 
-// Handle local CAMPP subfolder if present
-$localPrefix = '/velora-ecommerce';
-$isLocal = str_starts_with($uri, $localPrefix);
-if ($isLocal) {
-    $uri = substr($uri, strlen($localPrefix));
+// 0. Automatically clean up '/velora-ecommerce' from requests in production
+if (str_starts_with($uri, '/velora-ecommerce/')) {
+    $cleanPath = substr($uri, strlen('/velora-ecommerce'));
+    $cleanPath = '/' . ltrim($cleanPath, '/');
+    $query = $_SERVER['QUERY_STRING'] ?? '';
+    $redirectUrl = $cleanPath . ($query ? '?' . $query : '');
+    header('Location: ' . $redirectUrl, true, 301);
+    exit;
 }
 
 $uri = '/' . ltrim($uri, '/');
@@ -43,11 +47,20 @@ if ($uri === '/' || $uri === '' || $uri === '/index.php') {
     }
 }
 
-// 4. Serve any frontend files directly (CSS, JS, images, HTML)
-$frontendPath = __DIR__ . '/frontend' . $uri;
+// 4. Check if file exists directly at root (e.g. /favicon.ico)
+$rootPath = __DIR__ . $uri;
+if (is_file($rootPath) && !str_starts_with($uri, '/backend/config/')) {
+    header('Content-Type: ' . (mime_content_type($rootPath) ?: 'text/plain'));
+    readfile($rootPath);
+    exit;
+}
+
+// 5. Serve any frontend files directly (CSS, JS, images, HTML)
+// Handles both /frontend/index.html and clean /index.html
+$frontendSubUri = str_starts_with($uri, '/frontend/') ? substr($uri, strlen('/frontend')) : $uri;
+$frontendPath = __DIR__ . '/frontend/' . ltrim($frontendSubUri, '/');
 
 if (is_file($frontendPath)) {
-    // Determine proper content type
     $ext = strtolower(pathinfo($frontendPath, PATHINFO_EXTENSION));
     $mimeTypes = [
         'html' => 'text/html; charset=utf-8',
@@ -68,14 +81,14 @@ if (is_file($frontendPath)) {
     exit;
 }
 
-// 5. Fallback: Check if requested without .html extension (e.g. /products -> /frontend/products.html)
+// 6. Fallback: Check without .html extension (e.g. /products -> /frontend/products.html)
 if (is_file($frontendPath . '.html')) {
     header('Content-Type: text/html; charset=utf-8');
     readfile($frontendPath . '.html');
     exit;
 }
 
-// 6. Otherwise 404
+// 7. Otherwise 404
 http_response_code(404);
 header('Content-Type: text/html; charset=utf-8');
 echo '<!DOCTYPE html><html><head><title>404 Not Found</title></head><body style="font-family:sans-serif;text-align:center;padding:50px;"><h2>404 - Page Not Found</h2><p><a href="/">Return to Storefront</a></p></body></html>';

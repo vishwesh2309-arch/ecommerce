@@ -1,4 +1,30 @@
 
+// =========================================
+// ADMIN AUTHENTICATION GUARD
+// =========================================
+async function verifyAdminAuth() {
+    try {
+        const res = await fetch('../backend/api/admin-session.php', {
+            method: 'GET',
+            credentials: 'same-origin',
+            cache: 'no-store',
+            headers: { 'Accept': 'application/json' }
+        });
+        if (res.ok) {
+            const data = await res.json();
+            if (!data.authenticated || !data.isAdmin) {
+                // If not signed in as admin, redirect to admin-login.html
+                window.location.href = 'admin-login.html';
+                return;
+            }
+        }
+    } catch (e) {
+        console.warn('Admin auth verification check skipped:', e);
+    }
+}
+verifyAdminAuth();
+
+
 function renderPaymentStatusBadge(status) {
     const raw = String(status || "pending").trim().toLowerCase();
     let badgeClass = "badge-pay-pending";

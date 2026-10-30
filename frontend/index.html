@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Velora | Premium Online Shopping</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Outfit:wght@600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🛍️</text></svg>">
+</head>
+
+<body>
+
+    <!-- ================= TOP ANNOUNCEMENT BAR ================= -->
+    <div class="top-announcement">
+        <div class="container announcement-content">
+            <span class="announcement-text">✨ <strong>FESTIVE SPECIAL:</strong> Enjoy Free Express Shipping on orders over ₹999 & Extra 10% Off with code <strong>VELORA10</strong></span>
+            <div class="announcement-links">
+                <a href="#contact">Help Center</a>
+                <a href="my-orders.html">Track Order</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- ================= HEADER ================= -->
+    <header class="header">
+
+        <div class="container navbar">
+
+            <a href="index.html" class="logo">
+                <span class="logo-mark">V</span>
+                <span class="logo-text">VELORA</span>
+            </a>
+
+            <nav class="nav-links">
+                <a href="index.html" class="active">Home</a>
+                <a href="products.html">Shop</a>
+                <a href="#categories">Categories</a>
+                <a href="#featured">Featured</a>
+                <a href="#deals">Deals</a>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
+            </nav>
+
+            <div class="nav-actions">
+
+                <button class="search-btn" id="homeSearchBtn" type="button" aria-label="Open product search" title="Search products">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                </button>
+
+                <a href="wishlist.html" class="wishlist-link action-icon-btn" title="Saved Wishlist" aria-label="Wishlist">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+                </a>
+
+                <a href="cart.html" class="cart-link action-icon-btn" title="View Cart">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+                    <span class="cart-count" id="cartCount">0</span>
+                </a>
+
+                <div class="nav-auth-buttons">
+                    <a href="my-orders.html" class="nav-order-pill">Orders</a>
+                    <a href="login.html" class="btn btn-login-nav">Sign In</a>
+                </div>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- ================= HERO SECTION ================= -->
+    <main>
+
+        <section class="hero">
+
+            <div class="container hero-content">
+
+                <div class="hero-text">
+
+                    <div class="hero-badge">
+                        <span class="badge-pulse"></span>
+                        NEW SEASON 2026 COLLECTION
+                    </div>
+
+                    <h1>
+                        Elevate Your Style.<br>
+                        <span class="text-gradient">Redefine Everyday.</span>
+                    </h1>
+
+                    <p>
+                        Discover handpicked selections of premium fashion, immersive wireless audio tech, and performance footwear designed for timeless luxury and everyday comfort.
+                    </p>
+
+                    <div class="hero-cta-group">
+                        <a href="products.html" class="btn btn-primary">
+                            Explore Catalog
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                        </a>
+                        <a href="#categories" class="btn btn-secondary">
+                            Browse Categories
+                        </a>
+                    </div>
+
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <span class="stat-number">25,000+</span>
+                            <span class="stat-label">Happy Shoppers</span>
+                        </div>
+                        <div class="stat-divider"></div>
+                        <div class="stat-item">
+                            <span class="stat-number">4.9 / 5</span>
+                            <span class="stat-label">Verified Ratings</span>
+                        </div>
+                        <div class="stat-divider"></div>
+                        <div class="stat-item">
+                            <span class="stat-number">100%</span>
+                            <span class="stat-label">Authentic Gear</span>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="hero-image-wrapper">
+                    <div class="hero-image-card">
+                        <img
+                            src="images/hero/hero.jpg"
+                            alt="Velora premium shopping collection"
+                            class="hero-main-img"
+                        >
+                        <div class="hero-floating-card hero-floating-deal">
+                            <div class="floating-icon">🔥</div>
+                            <div>
+                                <strong>Trending Now</strong>
+                                <span>Up to 30% Off this week</span>
+                            </div>
+                        </div>
+                        <div class="hero-floating-card hero-floating-trust">
+                            <div class="avatar-group">
+                                <span>⭐</span>
+                                <strong>Top Rated Quality</strong>
+                            </div>
+                            <span class="subtext">Original Brand Guarantee</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- ================= BRAND HIGHLIGHTS / VALUE PROPS ================= -->
+        <section class="value-props">
+            <div class="container value-props-grid">
+                <div class="value-card">
+                    <div class="value-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13"></rect><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon><circle cx="5.5" cy="18.5" r="2.5"></circle><circle cx="18.5" cy="18.5" r="2.5"></circle></svg>
+                    </div>
+                    <div>
+                        <h4>Free Express Shipping</h4>
+                        <p>On all domestic orders over ₹999</p>
+                    </div>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                    </div>
+                    <div>
+                        <h4>Ultra Secure Checkout</h4>
+                        <p>256-bit encrypted transactions</p>
+                    </div>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 4 23 10 17 10"></polyline><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"></path></svg>
+                    </div>
+                    <div>
+                        <h4>Hassle-Free Returns</h4>
+                        <p>7-day doorstep return pickup</p>
+                    </div>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+                    </div>
+                    <div>
+                        <h4>Dedicated 24/7 Support</h4>
+                        <p>Instant expert care via chat & phone</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ================= CATEGORIES ================= -->
+        <section class="categories section" id="categories">
+
+            <div class="container">
+
+                <div class="section-heading-wrapper">
+                    <div class="section-heading">
+                        <span class="badge-tag">CURATED DEPARTMENTS</span>
+                        <h2>Explore by Category</h2>
+                        <p class="section-subtitle">Discover premium collections tailored to elevate your everyday lifestyle.</p>
+                    </div>
+                    <a href="products.html" class="browse-all-link">Browse Full Catalog →</a>
+                </div>
+
+                <div class="category-grid">
+                    <a href="products.html?category=Fashion" class="category-card">
+                        <div class="category-img-container">
+                            <img src="images/categories/men.jpg" alt="Fashion Collection" onerror="this.src='images/products/product1.jpg'">
+                            <div class="category-badge">Trending</div>
+                        </div>
+                        <div class="category-info">
+                            <div class="category-header">
+                                <h3>Modern Fashion</h3>
+                                <span class="category-arrow">→</span>
+                            </div>
+                            <p>Apparel, minimal tees, luxury fits & jackets</p>
+                        </div>
+                    </a>
+
+                    <a href="products.html?category=Electronics" class="category-card">
+                        <div class="category-img-container">
+                            <img src="images/products/product2.jpg" alt="Electronics & Audio">
+                            <div class="category-badge">Popular</div>
+                        </div>
+                        <div class="category-info">
+                            <div class="category-header">
+                                <h3>Smart Tech & Audio</h3>
+                                <span class="category-arrow">→</span>
+                            </div>
+                            <p>Hi-Fi wireless sound, ANC headphones & smart wear</p>
+                        </div>
+                    </a>
+
+                    <a href="products.html?category=Footwear" class="category-card">
+                        <div class="category-img-container">
+                            <img src="images/products/product3.jpg" alt="Footwear Collection">
+                            <div class="category-badge">New</div>
+                        </div>
+                        <div class="category-info">
+                            <div class="category-header">
+                                <h3>Premium Footwear</h3>
+                                <span class="category-arrow">→</span>
+                            </div>
+                            <p>Sport trainers, ergonomic runners & street kicks</p>
+                        </div>
+                    </a>
+
+                    <a href="products.html?category=Accessories" class="category-card">
+                        <div class="category-img-container">
+                            <img src="images/categories/accessories.jpg" alt="Accessories Collection" onerror="this.src='images/products/product4.jpg'">
+                            <div class="category-badge">Essentials</div>
+                        </div>
+                        <div class="category-info">
+                            <div class="category-header">
+                                <h3>Accessories</h3>
+                                <span class="category-arrow">→</span>
+                            </div>
+                            <p>Leather goods, watches, daily carries & eyewear</p>
+                        </div>
+                    </a>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= FEATURED PRODUCTS ================= -->
+        <section class="products section" id="featured">
+
+            <div class="container">
+
+                <div class="section-heading-wrapper">
+                    <div class="section-heading">
+                        <span class="badge-tag">HANDPICKED FOR YOU</span>
+                        <h2>Featured Best-Sellers</h2>
+                        <p class="section-subtitle">The top trending and most loved pieces chosen by the Velora community.</p>
+                    </div>
+
+                    <a href="products.html" class="view-all-btn">
+                        View All Products
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                    </a>
+                </div>
+
+
+                <div class="product-grid" id="productGrid">
+
+                    <!-- Product 1 -->
+                    <article class="product-card">
+                        <div class="product-badge-wrap">
+                            <span class="product-chip chip-hot">Best Seller</span>
+                        </div>
+                        <div class="product-image">
+                            <img
+                                src="images/products/product1.jpg"
+                                alt="Classic T-Shirt"
+                            >
+                        </div>
+
+                        <div class="product-info">
+                            <p class="product-category">Fashion</p>
+                            <h3>Classic T-Shirt</h3>
+                            <div class="product-rating">
+                                <span class="stars">★★★★★</span>
+                                <span class="count">(124)</span>
+                            </div>
+
+                            <div class="product-bottom">
+                                <div class="price-box">
+                                    <span class="price">₹799</span>
+                                    <span class="price-cut">₹1,199</span>
+                                </div>
+
+                                <button
+                                    class="add-cart"
+                                    data-product="Classic T-Shirt"
+                                    title="Add to cart"
+                                >
+                                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                                    Add
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+
+
+                    <!-- Product 2 -->
+                    <article class="product-card">
+                        <div class="product-badge-wrap">
+                            <span class="product-chip chip-discount">-20% OFF</span>
+                        </div>
+                        <div class="product-image">
+                            <img
+                                src="images/products/product2.jpg"
+                                alt="Wireless Headphones"
+                            >
+                        </div>
+
+                        <div class="product-info">
+                            <p class="product-category">Electronics</p>
+                            <h3>Wireless Headphones</h3>
+                            <div class="product-rating">
+                                <span class="stars">★★★★★</span>
+                                <span class="count">(89)</span>
+                            </div>
+
+                            <div class="product-bottom">
+                                <div class="price-box">
+                                    <span class="price">₹2,499</span>
+                                    <span class="price-cut">₹3,299</span>
+                                </div>
+
+                                <button
+                                    class="add-cart"
+                                    data-product="Wireless Headphones"
+                                    title="Add to cart"
+                                >
+                                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                                    Add
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+
+
+                    <!-- Product 3 -->
+                    <article class="product-card">
+                        <div class="product-badge-wrap">
+                            <span class="product-chip chip-popular">Popular</span>
+                        </div>
+                        <div class="product-image">
+                            <img
+                                src="images/products/product3.jpg"
+                                alt="Running Shoes"
+                            >
+                        </div>
+
+                        <div class="product-info">
+                            <p class="product-category">Footwear</p>
+                            <h3>Running Shoes</h3>
+                            <div class="product-rating">
+                                <span class="stars">★★★★☆</span>
+                                <span class="count">(64)</span>
+                            </div>
+
+                            <div class="product-bottom">
+                                <div class="price-box">
+                                    <span class="price">₹1,999</span>
+                                    <span class="price-cut">₹2,799</span>
+                                </div>
+
+                                <button
+                                    class="add-cart"
+                                    data-product="Running Shoes"
+                                    title="Add to cart"
+                                >
+                                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                                    Add
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+
+
+                    <!-- Product 4 -->
+                    <article class="product-card">
+                        <div class="product-badge-wrap">
+                            <span class="product-chip chip-new">New Arrival</span>
+                        </div>
+                        <div class="product-image">
+                            <img
+                                src="images/products/product4.jpg"
+                                alt="Smart Watch"
+                            >
+                        </div>
+
+                        <div class="product-info">
+                            <p class="product-category">Electronics</p>
+                            <h3>Smart Watch</h3>
+                            <div class="product-rating">
+                                <span class="stars">★★★★★</span>
+                                <span class="count">(112)</span>
+                            </div>
+
+                            <div class="product-bottom">
+                                <div class="price-box">
+                                    <span class="price">₹3,499</span>
+                                    <span class="price-cut">₹4,999</span>
+                                </div>
+
+                                <button
+                                    class="add-cart"
+                                    data-product="Smart Watch"
+                                    title="Add to cart"
+                                >
+                                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                                    Add
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= PROMOTIONAL BANNER / SPECIAL OFFER ================= -->
+        <section class="promotion section" id="deals">
+
+            <div class="container">
+                <div class="promo-card">
+                    <div class="promo-glow"></div>
+                    <div class="promo-content">
+                        <span class="promo-pill">FLASH SALE EVENT</span>
+                        <h2>Unmatched Quality.<br>Discounts Up To <span class="text-accent">40% OFF</span></h2>
+                        <p>Upgrade your lifestyle with our limited-edition products. Claim your special discounts before supplies run out.</p>
+                        
+                        <div class="promo-actions">
+                            <a href="products.html" class="btn btn-primary-light">
+                                Shop Exclusive Deals
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                            </a>
+                            <span class="promo-timer-note">⚡ Guaranteed Delivery & Easy Returns</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+
+        <!-- ================= ABOUT ================= -->
+        <section class="about section" id="about">
+
+            <div class="container about-content">
+
+                <div class="about-image">
+                    <div class="about-img-frame">
+                        <img
+                            src="images/hero/hero.jpg"
+                            alt="About Velora Philosophy"
+                        >
+                        <div class="about-stat-card">
+                            <span class="stat-number">100%</span>
+                            <span class="stat-text">Curated for Reliability & Style</span>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="about-text">
+
+                    <span class="badge-tag">ABOUT VELORA</span>
+
+                    <h2>
+                        Modern Shopping,<br>
+                        Elevated Simplicity.
+                    </h2>
+
+                    <p>
+                        At Velora, we believe that premium quality shouldn't come with friction. Our team scours designers and manufacturers to bring you aesthetic, durable essentials directly to your doorstep.
+                    </p>
+
+                    <p>
+                        From trendsetting wardrobe staples to audio gears with exceptional acoustics, each item goes through rigorous standard tests before landing in our curated catalog.
+                    </p>
+
+                    <div class="about-feature-list">
+                        <div class="about-feature-item">
+                            <div class="check-icon">✓</div>
+                            <span>Direct-to-consumer value pricing</span>
+                        </div>
+                        <div class="about-feature-item">
+                            <div class="check-icon">✓</div>
+                            <span>Eco-conscious sustainable packaging</span>
+                        </div>
+                        <div class="about-feature-item">
+                            <div class="check-icon">✓</div>
+                            <span>Full transparent warranty & prompt refunds</span>
+                        </div>
+                    </div>
+
+                    <a
+                        href="products.html"
+                        class="btn btn-primary"
+                    >
+                        Explore Our Catalog
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= CONTACT ================= -->
+        <section class="contact section" id="contact">
+
+            <div class="container contact-content">
+
+                <div class="contact-info">
+
+                    <span class="badge-tag">GET IN TOUCH</span>
+
+                    <h2>
+                        We'd Love to Hear<br>From You.
+                    </h2>
+
+                    <p>
+                        Have a question regarding sizing, shipping, or want advice on choosing the perfect gadget? Our customer success team is here for you 24/7.
+                    </p>
+
+                    <div class="contact-details">
+
+                        <div class="contact-item">
+                            <div class="contact-item-icon">📧</div>
+                            <div>
+                                <strong>Email Support</strong>
+                                <span>support@velora.com</span>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-item-icon">📞</div>
+                            <div>
+                                <strong>Phone & WhatsApp</strong>
+                                <span>+91 98765 43210</span>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-item-icon">📍</div>
+                            <div>
+                                <strong>Headquarters</strong>
+                                <span>Indiranagar, Bengaluru, India</span>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="contact-form-box">
+
+                    <form id="contactForm">
+
+                        <h3 class="form-title">Send a Quick Message</h3>
+
+                        <div class="form-group">
+                            <label for="contactName">Your Name</label>
+                            <input
+                                type="text"
+                                id="contactName"
+                                placeholder="e.g. Alex Johnson"
+                                required
+                            >
+                        </div>
+
+
+                        <div class="form-group">
+                            <label for="contactEmail">Email Address</label>
+                            <input
+                                type="email"
+                                id="contactEmail"
+                                placeholder="alex@example.com"
+                                required
+                            >
+                        </div>
+
+
+                        <div class="form-group">
+                            <label for="contactMessage">Your Message</label>
+                            <textarea
+                                id="contactMessage"
+                                rows="4"
+                                placeholder="Tell us how we can help..."
+                                required
+                            ></textarea>
+                        </div>
+
+
+                        <button
+                            type="submit"
+                            class="btn btn-primary btn-block"
+                        >
+                            Send Message
+                        </button>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="footer">
+
+        <div class="container footer-grid">
+
+            <div class="footer-about">
+
+                <a href="index.html" class="footer-logo">
+                    <span class="logo-mark">V</span>
+                    <span class="logo-text">VELORA</span>
+                </a>
+
+                <p>
+                    Velora is a design-first modern e-commerce storefront delivering high-grade everyday essentials across fashion, technology, and lifestyle gear.
+                </p>
+
+                <div class="footer-social-pills">
+                    <a href="#" class="social-pill" aria-label="Instagram">IG</a>
+                    <a href="#" class="social-pill" aria-label="Twitter">X</a>
+                    <a href="#" class="social-pill" aria-label="Facebook">FB</a>
+                    <a href="#" class="social-pill" aria-label="LinkedIn">IN</a>
+                </div>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h3>Quick Shop</h3>
+
+                <a href="products.html">All Products</a>
+                <a href="products.html?category=Fashion">Fashion & Apparel</a>
+                <a href="products.html?category=Electronics">Smart Audio & Tech</a>
+                <a href="products.html?category=Footwear">Athletic Footwear</a>
+                <a href="wishlist.html">Your Wishlist</a>
+
+            </div>
+
+
+            <div class="footer-column">
+ 
+                <h3>Customer Care</h3>
+
+                <a href="my-orders.html">Track Order</a>
+                <a href="account.html">Account Settings</a>
+                <a href="#contact">Help Center & FAQ</a>
+                <a href="#">Shipping & Returns</a>
+                <a href="#">Terms & Privacy</a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h3>Newsletter</h3>
+                <p class="newsletter-desc">Subscribe to unlock secret drops and 15% off your first purchase.</p>
+                <div class="newsletter-form">
+                    <input type="email" placeholder="Your email address" aria-label="Email">
+                    <button type="button" class="btn-subscribe">Join</button>
+                </div>
+                <span class="newsletter-subtext">No spam ever. Unsubscribe anytime.</span>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <div class="container footer-bottom-flex">
+                <p>© 2026 Velora E-Commerce. Built with precision and care.</p>
+                <div class="payment-badges">
+                    <span>💳 Visa</span>
+                    <span>Mastercard</span>
+                    <span>UPI / NetBanking</span>
+                    <span>COD Available</span>
+                </div>
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <script src="js/script.js"></script>
+
+</body>
+</html>

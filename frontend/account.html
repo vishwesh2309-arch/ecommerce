@@ -1,0 +1,1209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Account | Velora</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🛍️</text></svg>">
+</head>
+
+<body>
+
+
+    <!-- ================= HEADER ================= -->
+
+    <header class="header">
+
+        <div class="container navbar">
+
+            <a href="index.html" class="logo">
+                Velora
+            </a>
+
+
+            <nav class="nav-links">
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                <a href="products.html">
+                    Shop
+                </a>
+
+                <a href="wishlist.html">
+                    Wishlist
+                </a>
+
+                <a href="cart.html">
+                    Cart
+                </a>
+
+                <a href="account.html" class="active">
+                    Account
+                </a>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- ================= ACCOUNT ================= -->
+
+    <main>
+
+        <section class="account-section">
+
+            <div class="container">
+
+                <div class="account-header">
+
+                    <h1>
+                        My Account
+                    </h1>
+
+                    <p>
+                        Manage your Velora account
+                    </p>
+
+                </div>
+
+
+
+                <!-- ================= PROFILE ================= -->
+
+                <div class="account-card">
+
+                    <div class="account-card-header">
+
+                        <h2>
+                            Profile
+                        </h2>
+
+                    </div>
+
+
+                    <div class="account-profile">
+
+                        <div class="account-avatar">
+                            👤
+                        </div>
+
+
+                        <div class="account-info">
+
+                            <h3 id="accountName">
+                                Customer
+                            </h3>
+
+                            <p id="accountEmail">
+                                customer@example.com
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- ================= EDIT PROFILE ================= -->
+
+                <div
+                    class="account-card"
+                    id="editProfileSection"
+                    style="display: none;"
+                >
+
+                    <div class="account-card-header">
+
+                        <h2>
+                            Edit Profile
+                        </h2>
+
+                    </div>
+
+
+                    <form
+                        id="editProfileForm"
+                        class="auth-form"
+                        novalidate
+                    >
+
+                        <div class="form-group">
+
+                            <label for="editName">
+                                Full Name
+                            </label>
+
+                            <input
+                                type="text"
+                                id="editName"
+                                name="name"
+                                autocomplete="name"
+                                minlength="2"
+                                maxlength="100"
+                                required
+                            >
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="editEmail">
+                                Email Address
+                            </label>
+
+                            <input
+                                type="email"
+                                id="editEmail"
+                                name="email"
+                                autocomplete="email"
+                                maxlength="255"
+                                required
+                            >
+
+                        </div>
+
+
+                        <p
+                            id="editProfileMessage"
+                            class="auth-message"
+                            aria-live="polite"
+                        ></p>
+
+
+                        <div class="account-edit-actions">
+
+                            <button
+                                type="submit"
+                                class="btn btn-primary"
+                            >
+                                Save Changes
+                            </button>
+
+
+                            <button
+                                type="button"
+                                class="btn btn-secondary"
+                                id="cancelEditBtn"
+                            >
+                                Cancel
+                            </button>
+
+                        </div>
+
+                    </form>
+
+                </div>
+
+
+
+                <!-- ================= CHANGE PASSWORD ================= -->
+
+                <div
+                    class="account-card"
+                    id="changePasswordSection"
+                    style="display: none;"
+                >
+
+                    <div class="account-card-header">
+
+                        <h2>
+                            Change Password
+                        </h2>
+
+                    </div>
+
+
+                    <form
+                        id="changePasswordForm"
+                        class="auth-form"
+                        novalidate
+                    >
+
+                        <!-- CURRENT PASSWORD -->
+
+                        <div class="form-group">
+
+                            <label for="currentPassword">
+                                Current Password
+                            </label>
+
+
+                            <div class="password-wrapper">
+
+                                <input
+                                    type="password"
+                                    id="currentPassword"
+                                    name="current_password"
+                                    autocomplete="current-password"
+                                    placeholder="Enter your current password"
+                                    required
+                                >
+
+
+                                <button
+                                    type="button"
+                                    class="password-toggle"
+                                    id="toggleCurrentPassword"
+                                    aria-label="Show password"
+                                >
+                                    👁
+                                </button>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <!-- NEW PASSWORD -->
+
+                        <div class="form-group">
+
+                            <label for="newPassword">
+                                New Password
+                            </label>
+
+
+                            <div class="password-wrapper">
+
+                                <input
+                                    type="password"
+                                    id="newPassword"
+                                    name="new_password"
+                                    autocomplete="new-password"
+                                    minlength="8"
+                                    maxlength="4096"
+                                    placeholder="At least 8 characters"
+                                    required
+                                >
+
+
+                                <button
+                                    type="button"
+                                    class="password-toggle"
+                                    id="toggleNewPassword"
+                                    aria-label="Show password"
+                                >
+                                    👁
+                                </button>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <!-- CONFIRM NEW PASSWORD -->
+
+                        <div class="form-group">
+
+                            <label for="confirmNewPassword">
+                                Confirm New Password
+                            </label>
+
+
+                            <div class="password-wrapper">
+
+                                <input
+                                    type="password"
+                                    id="confirmNewPassword"
+                                    name="confirm_new_password"
+                                    autocomplete="new-password"
+                                    minlength="8"
+                                    maxlength="4096"
+                                    placeholder="Re-enter your new password"
+                                    required
+                                >
+
+
+                                <button
+                                    type="button"
+                                    class="password-toggle"
+                                    id="toggleConfirmNewPassword"
+                                    aria-label="Show password"
+                                >
+                                    👁
+                                </button>
+
+                            </div>
+
+                        </div>
+
+
+                        <p
+                            id="changePasswordMessage"
+                            class="auth-message"
+                            aria-live="polite"
+                        ></p>
+
+
+                        <div class="account-edit-actions">
+
+                            <button
+                                type="submit"
+                                class="btn btn-primary"
+                            >
+                                Update Password
+                            </button>
+
+
+                            <button
+                                type="button"
+                                class="btn btn-secondary"
+                                id="cancelPasswordBtn"
+                            >
+                                Cancel
+                            </button>
+
+                        </div>
+
+                    </form>
+
+                </div>
+
+
+
+                <!-- ================= ACCOUNT SETTINGS ================= -->
+
+                <div
+                    class="account-card"
+                    id="accountSettingsCard"
+                >
+
+                    <div class="account-card-header">
+
+                        <h2>
+                            Account Settings
+                        </h2>
+
+                    </div>
+
+
+                    <div class="account-options">
+
+
+                        <!-- MY ORDERS -->
+
+                        <a
+                            href="my-orders.html"
+                            class="account-option"
+                        >
+
+                            <span class="account-option-icon">
+                                📦
+                            </span>
+
+                            <span class="account-option-content">
+
+                                <strong>
+                                    My Orders
+                                </strong>
+
+                                <small>
+                                    View your order history
+                                </small>
+
+                            </span>
+
+                            <span class="account-option-arrow">
+                                →
+                            </span>
+
+                        </a>
+
+
+
+                        <!-- EDIT PROFILE -->
+
+                        <a
+                            href="#"
+                            class="account-option"
+                            id="editProfileBtn"
+                        >
+
+                            <span class="account-option-icon">
+                                ✏️
+                            </span>
+
+                            <span class="account-option-content">
+
+                                <strong>
+                                    Edit Profile
+                                </strong>
+
+                                <small>
+                                    Update your personal information
+                                </small>
+
+                            </span>
+
+                            <span class="account-option-arrow">
+                                →
+                            </span>
+
+                        </a>
+
+
+
+                        <!-- CHANGE PASSWORD -->
+
+                        <a
+                            href="#"
+                            class="account-option"
+                            id="changePasswordBtn"
+                        >
+
+                            <span class="account-option-icon">
+                                🔒
+                            </span>
+
+                            <span class="account-option-content">
+
+                                <strong>
+                                    Change Password
+                                </strong>
+
+                                <small>
+                                    Update your account password
+                                </small>
+
+                            </span>
+
+                            <span class="account-option-arrow">
+                                →
+                            </span>
+
+                        </a>
+
+
+
+                        <!-- LOGOUT -->
+
+                        <button
+                            type="button"
+                            class="account-option account-logout"
+                            id="logoutBtn"
+                        >
+
+                            <span class="account-option-icon">
+                                🚪
+                            </span>
+
+                            <span class="account-option-content">
+
+                                <strong>
+                                    Logout
+                                </strong>
+
+                                <small>
+                                    Sign out of your account
+                                </small>
+
+                            </span>
+
+                            <span class="account-option-arrow">
+                                →
+                            </span>
+
+                        </button>
+
+
+                    </div>
+
+                </div>
+
+
+                <p
+                    id="accountMessage"
+                    class="auth-message"
+                    aria-live="polite"
+                ></p>
+
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="footer">
+
+        <div class="container">
+
+            <p>
+                © 2026 Velora. All rights reserved.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+
+    <!-- ================= JAVASCRIPT ================= -->
+
+    <script src="js/script.js"></script>
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", async function () {
+
+            const accountName = document.getElementById("accountName");
+            const accountEmail = document.getElementById("accountEmail");
+            const logoutBtn = document.getElementById("logoutBtn");
+            const editProfileBtn = document.getElementById("editProfileBtn");
+            const changePasswordBtn = document.getElementById("changePasswordBtn");
+            const accountMessage = document.getElementById("accountMessage");
+
+            const editProfileSection = document.getElementById("editProfileSection");
+            const accountSettingsCard = document.getElementById("accountSettingsCard");
+            const editProfileForm = document.getElementById("editProfileForm");
+            const editName = document.getElementById("editName");
+            const editEmail = document.getElementById("editEmail");
+            const editProfileMessage = document.getElementById("editProfileMessage");
+            const cancelEditBtn = document.getElementById("cancelEditBtn");
+
+            const changePasswordSection = document.getElementById("changePasswordSection");
+            const changePasswordForm = document.getElementById("changePasswordForm");
+            const currentPassword = document.getElementById("currentPassword");
+            const newPassword = document.getElementById("newPassword");
+            const confirmNewPassword = document.getElementById("confirmNewPassword");
+            const changePasswordMessage = document.getElementById("changePasswordMessage");
+            const cancelPasswordBtn = document.getElementById("cancelPasswordBtn");
+
+            const toggleCurrentPassword = document.getElementById("toggleCurrentPassword");
+            const toggleNewPassword = document.getElementById("toggleNewPassword");
+            const toggleConfirmNewPassword = document.getElementById("toggleConfirmNewPassword");
+
+            let currentUser = null;
+
+
+            function setMessage(element, message, color = "#c62828") {
+                element.textContent = message;
+                element.style.color = color;
+            }
+
+
+            async function apiRequest(url, options = {}) {
+
+                const response = await fetch(url, {
+                    credentials: "same-origin",
+                    cache: "no-store",
+                    ...options,
+                    headers: {
+                        "Accept": "application/json",
+                        ...(options.body ? {
+                            "Content-Type": "application/json"
+                        } : {}),
+                        ...(options.headers || {})
+                    }
+                });
+
+
+                let data;
+
+                try {
+                    data = await response.json();
+                } catch {
+                    throw new Error("The server returned an invalid response.");
+                }
+
+
+                if (response.status === 401) {
+
+                    window.location.replace("login.html");
+
+                    throw new Error(
+                        "Your session has expired. Please log in again."
+                    );
+                }
+
+
+                if (!response.ok || data.success !== true) {
+
+                    throw new Error(
+                        data.message ||
+                        "The request could not be completed."
+                    );
+                }
+
+
+                return data;
+            }
+
+
+            function displayUser(user) {
+
+                accountName.textContent =
+                    user.name || "Customer";
+
+                accountEmail.textContent =
+                    user.email || "";
+
+                editName.value =
+                    user.name || "";
+
+                editEmail.value =
+                    user.email || "";
+            }
+
+
+            function showSettings() {
+
+                editProfileSection.style.display = "none";
+                changePasswordSection.style.display = "none";
+                accountSettingsCard.style.display = "block";
+            }
+
+
+            function setupPasswordToggle(button, input) {
+
+                button.addEventListener("click", function () {
+
+                    const showing =
+                        input.type === "password";
+
+                    input.type =
+                        showing ? "text" : "password";
+
+                    button.textContent =
+                        showing ? "🙈" : "👁";
+
+                    button.setAttribute(
+                        "aria-label",
+                        showing
+                            ? "Hide password"
+                            : "Show password"
+                    );
+                });
+            }
+
+
+            setupPasswordToggle(
+                toggleCurrentPassword,
+                currentPassword
+            );
+
+            setupPasswordToggle(
+                toggleNewPassword,
+                newPassword
+            );
+
+            setupPasswordToggle(
+                toggleConfirmNewPassword,
+                confirmNewPassword
+            );
+
+
+            // ================= LOAD PROFILE =================
+
+            try {
+
+                const result =
+                    await apiRequest("api/profile.php");
+
+                currentUser =
+                    result.user;
+
+                displayUser(currentUser);
+
+            } catch (error) {
+
+                if (
+                    error.message &&
+                    !error.message.includes("session")
+                ) {
+
+                    accountMessage.textContent =
+                        error.message;
+                }
+
+                return;
+            }
+
+
+
+            // ================= EDIT PROFILE =================
+
+            editProfileBtn.addEventListener(
+                "click",
+                function (event) {
+
+                    event.preventDefault();
+
+                    displayUser(currentUser);
+
+                    setMessage(
+                        editProfileMessage,
+                        ""
+                    );
+
+                    editProfileSection.style.display =
+                        "block";
+
+                    changePasswordSection.style.display =
+                        "none";
+
+                    accountSettingsCard.style.display =
+                        "none";
+
+                    editName.focus();
+                }
+            );
+
+
+            cancelEditBtn.addEventListener(
+                "click",
+                function () {
+
+                    showSettings();
+
+                    setMessage(
+                        editProfileMessage,
+                        ""
+                    );
+
+                    displayUser(currentUser);
+                }
+            );
+
+
+            editProfileForm.addEventListener(
+                "submit",
+                async function (event) {
+
+                    event.preventDefault();
+
+                    const newName =
+                        editName.value.trim();
+
+                    const newEmail =
+                        editEmail.value
+                            .trim()
+                            .toLowerCase();
+
+
+                    setMessage(
+                        editProfileMessage,
+                        ""
+                    );
+
+
+                    if (
+                        newName.length < 2 ||
+                        newName.length > 100
+                    ) {
+
+                        setMessage(
+                            editProfileMessage,
+                            "Please enter your full name using 2 to 100 characters."
+                        );
+
+                        editName.focus();
+
+                        return;
+                    }
+
+
+                    if (
+                        !newEmail ||
+                        !editEmail.validity.valid
+                    ) {
+
+                        setMessage(
+                            editProfileMessage,
+                            "Please enter a valid email address."
+                        );
+
+                        editEmail.focus();
+
+                        return;
+                    }
+
+
+                    if (
+                        newEmail !==
+                        String(
+                            currentUser.email || ""
+                        ).toLowerCase()
+                    ) {
+
+                        setMessage(
+                            editProfileMessage,
+                            "Email changes are not enabled yet. Keep your current email address for now."
+                        );
+
+                        editEmail.value =
+                            currentUser.email || "";
+
+                        editEmail.focus();
+
+                        return;
+                    }
+
+
+                    const submitButton =
+                        editProfileForm.querySelector(
+                            'button[type="submit"]'
+                        );
+
+                    submitButton.disabled = true;
+
+
+                    try {
+
+                        const result =
+                            await apiRequest(
+                                "api/profile.php",
+                                {
+                                    method: "POST",
+
+                                    body: JSON.stringify({
+                                        full_name: newName
+                                    })
+                                }
+                            );
+
+
+                        currentUser =
+                            result.user;
+
+                        displayUser(
+                            currentUser
+                        );
+
+
+                        setMessage(
+                            editProfileMessage,
+                            result.message ||
+                            "Profile updated successfully.",
+                            "#2e7d32"
+                        );
+
+
+                        window.setTimeout(
+                            function () {
+
+                                showSettings();
+
+                                setMessage(
+                                    editProfileMessage,
+                                    ""
+                                );
+
+                            },
+                            1000
+                        );
+
+
+                    } catch (error) {
+
+                        setMessage(
+                            editProfileMessage,
+                            error.message ||
+                            "Could not update your profile."
+                        );
+
+                    } finally {
+
+                        submitButton.disabled =
+                            false;
+                    }
+                }
+            );
+
+
+
+            // ================= CHANGE PASSWORD =================
+
+            changePasswordBtn.addEventListener(
+                "click",
+                function (event) {
+
+                    event.preventDefault();
+
+                    changePasswordForm.reset();
+
+                    setMessage(
+                        changePasswordMessage,
+                        ""
+                    );
+
+                    changePasswordSection.style.display =
+                        "block";
+
+                    editProfileSection.style.display =
+                        "none";
+
+                    accountSettingsCard.style.display =
+                        "none";
+
+                    currentPassword.focus();
+                }
+            );
+
+
+            cancelPasswordBtn.addEventListener(
+                "click",
+                function () {
+
+                    showSettings();
+
+                    changePasswordForm.reset();
+
+                    setMessage(
+                        changePasswordMessage,
+                        ""
+                    );
+                }
+            );
+
+
+            changePasswordForm.addEventListener(
+                "submit",
+                async function (event) {
+
+                    event.preventDefault();
+
+
+                    const oldPassword =
+                        currentPassword.value;
+
+                    const password =
+                        newPassword.value;
+
+                    const confirmPassword =
+                        confirmNewPassword.value;
+
+
+                    setMessage(
+                        changePasswordMessage,
+                        ""
+                    );
+
+
+                    if (
+                        !oldPassword ||
+                        !password ||
+                        !confirmPassword
+                    ) {
+
+                        setMessage(
+                            changePasswordMessage,
+                            "Please complete all password fields."
+                        );
+
+                        return;
+                    }
+
+
+                    if (
+                        password.length < 8 ||
+                        password.length > 4096
+                    ) {
+
+                        setMessage(
+                            changePasswordMessage,
+                            "Your new password must contain between 8 and 4096 characters."
+                        );
+
+                        newPassword.focus();
+
+                        return;
+                    }
+
+
+                    if (
+                        password === oldPassword
+                    ) {
+
+                        setMessage(
+                            changePasswordMessage,
+                            "Your new password must differ from your current password."
+                        );
+
+                        newPassword.focus();
+
+                        return;
+                    }
+
+
+                    if (
+                        password !== confirmPassword
+                    ) {
+
+                        setMessage(
+                            changePasswordMessage,
+                            "Your new passwords do not match."
+                        );
+
+                        confirmNewPassword.focus();
+
+                        return;
+                    }
+
+
+                    const submitButton =
+                        changePasswordForm.querySelector(
+                            'button[type="submit"]'
+                        );
+
+                    submitButton.disabled = true;
+
+
+                    try {
+
+                        const result =
+                            await apiRequest(
+                                "api/update-password.php",
+                                {
+                                    method: "POST",
+
+                                    body: JSON.stringify({
+                                        current_password:
+                                            oldPassword,
+
+                                        new_password:
+                                            password,
+
+                                        confirm_new_password:
+                                            confirmPassword
+                                    })
+                                }
+                            );
+
+
+                        setMessage(
+                            changePasswordMessage,
+                            result.message ||
+                            "Password updated successfully.",
+                            "#2e7d32"
+                        );
+
+
+                        changePasswordForm.reset();
+
+
+                        /*
+                         * IMPORTANT:
+                         * Do NOT logout the user after changing
+                         * the password.
+                         *
+                         * The PHP session remains active, so the
+                         * user stays on the Account page.
+                         */
+
+
+                        window.setTimeout(
+                            function () {
+
+                                showSettings();
+
+                                setMessage(
+                                    changePasswordMessage,
+                                    ""
+                                );
+
+                            },
+                            1500
+                        );
+
+
+                    } catch (error) {
+
+                        /*
+                         * Wrong current password or any other
+                         * password error stays on this page.
+                         * The user is NOT logged out.
+                         */
+
+                        setMessage(
+                            changePasswordMessage,
+                            error.message ||
+                            "Could not update your password."
+                        );
+
+                    } finally {
+
+                        submitButton.disabled =
+                            false;
+                    }
+                }
+            );
+
+
+
+            // ================= LOGOUT =================
+
+            logoutBtn.addEventListener(
+                "click",
+                async function () {
+
+                    logoutBtn.disabled = true;
+
+
+                    try {
+
+                        await apiRequest(
+                            "api/logout.php",
+                            {
+                                method: "POST"
+                            }
+                        );
+
+                    } catch (error) {
+
+                        // Still remove local compatibility flags
+                        // and send the user to login.
+
+                        console.error(
+                            "Velora logout:",
+                            error.message
+                        );
+
+                    } finally {
+
+                        localStorage.removeItem(
+                            "veloraLoggedIn"
+                        );
+
+                        localStorage.removeItem(
+                            "veloraCurrentUser"
+                        );
+
+                        window.location.replace(
+                            "login.html"
+                        );
+                    }
+                }
+            );
+
+
+            accountMessage.textContent = "";
+
+        });
+    </script>
+
+
+</body>
+
+</html>

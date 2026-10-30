@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Velora | Products</title>
+
+    <link
+        rel="stylesheet"
+        href="css/style.css"
+    >
+
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🛍️</text></svg>">
+</head>
+
+
+<body>
+
+
+    <!-- =========================================
+         HEADER
+    ========================================== -->
+
+    <header class="site-header">
+
+        <div class="container header-container">
+
+            <a
+                href="index.html"
+                class="logo"
+            >
+                Velora
+            </a>
+
+
+            <nav class="nav-links">
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                <a
+                    href="products.html"
+                    class="active"
+                >
+                    Shop
+                </a>
+                <a href="wishlist.html">Wishlist</a>
+
+                <a href="index.html#categories">
+                    Categories
+                </a>
+
+                <a href="index.html#about">
+                    About
+                </a>
+
+                <a href="index.html#contact">
+                    Contact
+                </a>
+                <a href="login.html">Login</a>
+                <a href = "register.html">Register</a>
+                <a href = "my-orders.html">My Orders</a>
+
+            </nav>
+
+
+            <div class="header-actions">
+
+                <a
+                    href="products.html"
+                    class="search-icon"
+                    aria-label="Search"
+                >
+                    🔍
+                </a>
+
+
+                <a
+                    href="cart.html"
+                    class="cart-icon"
+                    aria-label="Cart"
+                >
+
+                    🛒
+
+                    <span class="cart-count">
+                        0
+                    </span>
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =========================================
+         PRODUCTS PAGE HERO
+    ========================================== -->
+
+    <section class="products-page-hero">
+
+        <div class="container">
+
+            <p>
+                VELORA COLLECTION
+            </p>
+
+            <h1>
+                All Products
+            </h1>
+
+            <span>
+                Discover products made for modern living.
+            </span>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================
+         PRODUCTS SECTION
+    ========================================== -->
+
+    <main>
+
+        <section class="products-section">
+
+            <div class="container">
+
+
+                <!-- =================================
+                     SEARCH / FILTER / SORT
+                ================================== -->
+
+                <div class="products-top">
+
+
+                    <!-- SEARCH + CATEGORY -->
+
+                    <div class="product-filters">
+
+
+                        <div class="search-box">
+
+                            <input
+                                type="text"
+                                id="productSearch"
+                                placeholder="Search products..."
+                            >
+
+                        </div>
+
+
+                        <div class="category-filter">
+
+                            <select
+                                id="categoryFilter"
+                            >
+
+                                <option value="all">
+                                    All Categories
+                                </option>
+
+                                <option value="Fashion">
+                                    Fashion
+                                </option>
+
+                                <option value="Electronics">
+                                    Electronics
+                                </option>
+
+                                <option value="Footwear">
+                                    Footwear
+                                </option>
+
+                            </select>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- RESULT COUNT + SORT -->
+
+                    <div class="sort-section">
+
+
+                        <p
+                            class="products-result-text"
+                            id="productResultCount"
+                        >
+                            Showing 8 products
+                        </p>
+
+
+                        <select
+                            class="sort-products"
+                            id="sortProducts"
+                        >
+
+                            <option value="default">
+                                Sort By
+                            </option>
+
+                            <option value="low-high">
+                                Price: Low to High
+                            </option>
+
+                            <option value="high-low">
+                                Price: High to Low
+                            </option>
+
+                            <option value="name">
+                                Name: A-Z
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- =================================
+                     PRODUCT GRID
+                ================================== -->
+
+                <div
+                    class="product-grid all-product-grid"
+                    id="productGrid"
+                >
+
+                </div>
+
+
+                <!-- =================================
+                     NO PRODUCTS MESSAGE
+                ================================== -->
+
+                <div
+                    class="no-products"
+                    id="noProducts"
+                >
+
+                    <h3>
+                        No products found
+                    </h3>
+
+                    <p>
+                        Try changing your search or category.
+                    </p>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- =========================================
+         BENEFITS
+    ========================================== -->
+
+    <section class="benefits">
+
+        <div class="container">
+
+            <div class="benefits-grid">
+
+                <div class="benefit-item">
+
+                    <h3>
+                        Free Shipping
+                    </h3>
+
+                    <p>
+                        On orders above ₹999
+                    </p>
+
+                </div>
+
+
+                <div class="benefit-item">
+
+                    <h3>
+                        Secure Payment
+                    </h3>
+
+                    <p>
+                        Safe and secure checkout
+                    </p>
+
+                </div>
+
+
+                <div class="benefit-item">
+
+                    <h3>
+                        Easy Returns
+                    </h3>
+
+                    <p>
+                        Simple return process
+                    </p>
+
+                </div>
+
+
+                <div class="benefit-item">
+
+                    <h3>
+                        Support
+                    </h3>
+
+                    <p>
+                        We're here to help
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================
+         FOOTER
+    ========================================== -->
+
+    <footer class="site-footer">
+
+        <div class="container">
+
+            <div class="footer-content">
+
+
+                <div class="footer-brand">
+
+                    <h3>
+                        Velora
+                    </h3>
+
+                    <p>
+                        Modern shopping for modern living.
+                    </p>
+
+                </div>
+
+
+                <div class="footer-links">
+
+                    <h4>
+                        Quick Links
+                    </h4>
+
+                    <a href="index.html">
+                        Home
+                    </a>
+
+                    <a href="products.html">
+                        Shop
+                    </a>
+
+                    <a href="cart.html">
+                        Cart
+                    </a>
+
+                </div>
+
+
+                <div class="footer-links">
+
+                    <h4>
+                        Categories
+                    </h4>
+
+                    <a href="products.html">
+                        Fashion
+                    </a>
+
+                    <a href="products.html">
+                        Electronics
+                    </a>
+
+                    <a href="products.html">
+                        Footwear
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="footer-bottom">
+
+                <p>
+                    © 2026 Velora. All rights reserved.
+                </p>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+
+    <!-- JAVASCRIPT -->
+
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>

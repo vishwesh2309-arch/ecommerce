@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Velora | Admin Dashboard</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Outfit:wght@600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/admin.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🛍️</text></svg>">
+</head>
+<body>
+    <div class="admin-layout">
+
+                <!-- SIDEBAR -->
+                <!-- MODERN PRO SIDEBAR -->
+        <aside class="admin-sidebar">
+            <div class="sidebar-top">
+                <a href="admin.html" class="admin-brand-wrapper">
+                    <div class="admin-logo-mark">
+                        <span>V</span>
+                    </div>
+                    <div class="admin-brand-text">
+                        <span class="admin-brand">VELORA</span>
+                        <span class="sidebar-caption">COMMERCE PRO</span>
+                    </div>
+                </a>
+
+                <div class="nav-section-label">MAIN NAVIGATION</div>
+
+                <nav class="admin-nav">
+                    <a class="nav-link " href="admin.html">
+                        <span class="nav-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="9"></rect><rect x="14" y="3" width="7" height="5"></rect><rect x="14" y="12" width="7" height="9"></rect><rect x="3" y="16" width="7" height="5"></rect></svg></span>
+                        <span class="nav-text">Dashboard</span>
+                    </a>
+                    <a class="nav-link " href="admin-products-view.html">
+                        <span class="nav-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg></span>
+                        <span class="nav-text">Products</span>
+                    </a>
+                    <a class="nav-link active" href="admin-orders-view.html">
+                        <span class="nav-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg></span>
+                        <span class="nav-text">Orders</span>
+                    </a>
+                    <a class="nav-link " href="admin-customers-view.html">
+                        <span class="nav-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg></span>
+                        <span class="nav-text">Customers</span>
+                    </a>
+                </nav>
+
+                <div class="nav-section-label" style="margin-top: 24px;">EXTERNAL</div>
+
+                <nav class="admin-nav">
+                    <a class="nav-link nav-link-store" href="index.html" target="_blank">
+                        <span class="nav-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg></span>
+                        <span class="nav-text">Live Storefront</span>
+                        <svg class="external-icon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                    </a>
+                </nav>
+            </div>
+
+            <div class="sidebar-footer">
+                <div class="admin-profile-pill">
+                    <div class="admin-avatar">AD</div>
+                    <div class="admin-info">
+                        <strong>Administrator</strong>
+                        <span class="status-indicator-online">● Online</span>
+                    </div>
+                </div>
+            </div>
+        </aside>
+        <!-- MAIN CONTENT -->
+        <main class="admin-main">
+
+            <!-- HEADER -->
+            <header class="admin-header">
+                <div>
+                    <p class="eyebrow">STORE MANAGEMENT</p>
+                    <h1>Orders & Fulfillment</h1>
+                    <p class="muted">Track customer orders, manage statuses, and view invoice records.</p>
+                </div>
+
+                <a class="store-link" href="index.html" target="_blank">View Store ↗</a>
+            </header>
+<section id="orders" class="panel">
+
+                <div class="section-heading">
+                    <div>
+                        <h2>Order Management</h2>
+                        <p class="muted">Search and review all customer orders.</p>
+                    </div>
+                </div>
+
+                <!-- ORDER SEARCH AND STATUS FILTER -->
+                <div class="order-toolbar">
+
+                    <input
+                        type="search"
+                        id="orderSearch"
+                        placeholder="Search by order ID or customer"
+                        aria-label="Search orders"
+                    >
+
+                    <select
+                        id="orderStatusFilter"
+                        aria-label="Filter orders by status"
+                    >
+                        <option value="all">All Statuses</option>
+                        <option value="Placed">Placed</option>
+                        <option value="Confirmed">Confirmed</option>
+                        <option value="Processing">Processing</option>
+                        <option value="Shipped">Shipped</option>
+                        <option value="Delivered">Delivered</option>
+                        <option value="Cancelled">Cancelled</option>
+                    </select>
+
+                    <span id="allOrdersCount" class="catalog-count">
+                        0 orders
+                    </span>
+
+                </div>
+
+                <!-- ALL ORDERS TABLE -->
+                <div class="table-wrapper">
+                    <table class="admin-table">
+
+                        <thead>
+                            <tr>
+                                <th>Order ID</th>
+                                <th>Customer</th>
+                                <th>Date</th>
+                                <th>Items</th>
+                                <th>Total</th>
+                                <th>Method</th>
+                                <th>Payment Status</th>
+                                <th>Order Status</th>
+                            </tr>
+                        </thead>
+
+                        <tbody id="allOrdersBody">
+                            <tr>
+                                <td colspan="8">Loading orders...</td>
+                            </tr>
+                        </tbody>
+
+                    </table>
+                </div>
+
+                <p class="catalog-note">
+                    Orders are read from this browser's localStorage.
+                    This section does not delete or modify orders.
+                </p>
+
+                <!-- EXISTING ORDER DETAILS MODAL -->
+                <div id="orderDetailsModal" class="order-details-modal hidden">
+
+                    <div
+                        class="order-details-modal-content"
+                        role="dialog"
+                        aria-modal="true"
+                        aria-labelledby="orderDetailsModalTitle"
+                    >
+
+                        <div class="order-details-modal-header">
+                            <div>
+                                <p class="eyebrow">ORDER MANAGEMENT</p>
+                                <h2 id="orderDetailsModalTitle">Order Details</h2>
+                            </div>
+
+                            <button
+                                type="button"
+                                id="closeOrderDetailsBtn"
+                                class="btn btn-secondary"
+                            >
+                                Close
+                            </button>
+                        </div>
+
+                        <div id="orderDetailsModalBody">
+                            <p>Select an order to view its details.</p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+            <!-- RECENT ORDERS -->
+            <section class="panel">
+
+                <div class="section-heading">
+                    <div>
+                        <h2>Recent Orders</h2>
+                        <p class="muted">Your 10 most recent orders.</p>
+                    </div>
+
+                    <a href="my-orders.html" class="text-link">
+                        Customer orders page
+                    </a>
+                </div>
+
+                <div class="table-wrapper">
+                    <table class="admin-table">
+
+                        <thead>
+                            <tr>
+                                <th>Order ID</th>
+                                <th>Customer</th>
+                                <th>Date</th>
+                                <th>Total</th>
+                                <th>Payment Status</th>
+                                <th>Order Status</th>
+                            </tr>
+                        </thead>
+
+                        <tbody id="recentOrdersBody">
+                            <tr>
+                                <td colspan="6">No orders found.</td>
+                            </tr>
+                        </tbody>
+
+                    </table>
+                </div>
+
+            </section>
+
+            <!-- CUSTOMER MANAGEMENT -->
+            </main>
+
+    </div>
+
+    <!-- ADMIN JAVASCRIPT -->
+     
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script src="js/admin.js"></script>
+
+</body>
+</html>

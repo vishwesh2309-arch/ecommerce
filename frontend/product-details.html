@@ -1,0 +1,150 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Product Details | Velora</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🛍️</text></svg>">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="site-header">
+        <div class="container header-container">
+
+            <a href="index.html" class="logo">VELORA</a>
+
+            <nav class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="products.html">Shop</a>
+                <a href="index.html#categories">Categories</a>
+                <a href="index.html#about">About</a>
+                <a href="index.html#contact">Contact</a>
+                <a href="my-orders.html">My Orders</a>
+            </nav>
+
+            <div class="header-actions">
+                <a
+                    href="products.html"
+                    class="search-icon"
+                    aria-label="Search products"
+                >🔍</a>
+
+                <a
+                    href="cart.html"
+                    class="cart-icon"
+                    aria-label="Shopping cart"
+                >
+                    🛒
+                    <span class="cart-count">0</span>
+                </a>
+            </div>
+
+        </div>
+    </header>
+
+
+    <!-- PRODUCT DETAILS -->
+    <main>
+
+        <section class="product-details-section">
+            <div class="container">
+
+                <!-- JavaScript loads the selected product here -->
+                <div id="productDetails"></div>
+
+            </div>
+        </section>
+
+
+        <!-- CUSTOMER REVIEWS -->
+        <section class="reviews-section container">
+
+            <h2>Customer Reviews</h2>
+            <p>Share your experience with this product.</p>
+
+            <form id="reviewForm" class="review-form">
+
+                <label for="reviewName">Your name</label>
+                <input
+                    type="text"
+                    id="reviewName"
+                    maxlength="60"
+                    required
+                    placeholder="Enter your name"
+                >
+
+                <label for="reviewRating">Your rating</label>
+                <select id="reviewRating" required>
+                    <option value="">Select a rating</option>
+                    <option value="5">★★★★★ — Excellent</option>
+                    <option value="4">★★★★ — Very good</option>
+                    <option value="3">★★★ — Good</option>
+                    <option value="2">★★ — Fair</option>
+                    <option value="1">★ — Poor</option>
+                </select>
+
+                <label for="reviewComment">Your review</label>
+                <textarea
+                    id="reviewComment"
+                    rows="4"
+                    maxlength="1000"
+                    required
+                    placeholder="What did you think about this product?"
+                ></textarea>
+
+                <button type="submit" class="btn">
+                    Submit Review
+                </button>
+
+            </form>
+
+            <div id="reviewMessage" role="status" aria-live="polite"></div>
+
+            <div id="productReviews"></div>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <div class="container">
+
+            <div class="footer-content">
+
+                <div class="footer-brand">
+                    <h3>VELORA</h3>
+                    <p>Modern products. Simple shopping.</p>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <a href="index.html">Home</a>
+                    <a href="products.html">Shop</a>
+                    <a href="cart.html">Cart</a>
+                    <a href="my-orders.html">My Orders</a>
+                </div>
+
+            </div>
+
+            <div class="footer-bottom">
+                <p>© 2026 Velora. All rights reserved.</p>
+            </div>
+
+        </div>
+    </footer>
+
+
+    <!-- JAVASCRIPT -->
+    <script src="js/script.js"></script>
+
+</body>
+</html>

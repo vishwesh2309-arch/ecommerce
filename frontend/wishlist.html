@@ -1,0 +1,81 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Wishlist | Velora</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🛍️</text></svg>">
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+    <header class="header">
+        <div class="container nav-container">
+
+            <a href="index.html" class="logo">
+                Velora
+            </a>
+
+            <nav class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="products.html">Products</a>
+                <a href="wishlist.html" class="active">Wishlist</a>
+
+                <a href="cart.html" class="cart-icon" aria-label="Shopping cart">
+                    Cart <span class="cart-count">0</span>
+                </a>
+
+                <a href="login.html">Login</a>
+                <a href="register.html">Register</a>
+                <a href="my-orders.html">My Orders</a>
+            </nav>
+
+        </div>
+    </header>
+
+
+    <!-- ================= WISHLIST HERO ================= -->
+    <section class="wishlist-page-hero">
+        <div class="container">
+
+            <p>YOUR FAVORITES</p>
+
+            <h1>My Wishlist</h1>
+
+            <span>
+                Save your favorite products and shop them later.
+            </span>
+
+        </div>
+    </section>
+
+
+    <!-- ================= WISHLIST SECTION ================= -->
+    <section class="wishlist-section">
+        <div class="container">
+
+            <!-- JavaScript renders products OR the empty state here -->
+            <div class="wishlistItems" id="wishlistItems"></div>
+
+        </div>
+    </section>
+
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="footer">
+        <div class="container">
+            <p>© 2026 Velora. All rights reserved.</p>
+        </div>
+    </footer>
+
+
+    <!-- ================= JAVASCRIPT ================= -->
+    <script src="js/script.js"></script>
+
+</body>
+</html>

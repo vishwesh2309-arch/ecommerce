@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Shopping Cart - Velora</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🛍️</text></svg>">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="site-header">
+
+        <div class="container header-container">
+
+            <a href="index.html" class="logo">
+                Velora
+            </a>
+
+            <nav class="nav-links">
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                <a href="products.html">
+                    Products
+                </a>
+
+                <a href="index.html#categories">
+                    Categories
+                </a>
+
+                <a href="index.html#about">
+                    About
+                </a>
+
+                <a href="index.html#contact">
+                    Contact
+                </a>
+                <a href="login.html">Login</a>
+                <a href = "register.html">Register</a>
+                <a href = "my-orders.html">My Orders</a>
+
+            </nav>
+
+            <div class="header-actions">
+
+                <a href="products.html" class="search-icon">
+                    🔍
+                </a>
+
+                <a href="cart.html" class="cart-icon">
+                    🛒
+                    <span class="cart-count">0</span>
+                </a>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- CART HERO -->
+    <section class="cart-page-hero">
+
+        <div class="container">
+
+            <p>Your Shopping Bag</p>
+
+            <h1>Shopping Cart</h1>
+
+            <span>
+                Review your items before checkout.
+            </span>
+
+        </div>
+
+    </section>
+
+
+    <!-- CART SECTION -->
+    <section class="cart-section">
+
+        <div class="container">
+
+            <div class="cart-layout">
+
+                <!-- CART ITEMS -->
+                <div class="cart-items-section">
+
+                    <div class="cart-items-header">
+
+                        <h2>Your Items</h2>
+
+                        <span id="cartItemsCount">
+                            0 items
+                        </span>
+
+                    </div>
+
+                    <div id="cartItems">
+
+                        <!-- Cart items will appear here -->
+
+                    </div>
+
+                    <!-- EMPTY CART -->
+                    <div
+                        class="empty-cart"
+                        id="emptyCart"
+                    >
+
+                        <div class="empty-cart-icon">
+                            🛒
+                        </div>
+
+                        <h3>
+                            Your cart is empty
+                        </h3>
+
+                        <p>
+                            Looks like you haven't added
+                            anything to your cart yet.
+                        </p>
+
+                        <a
+                            href="products.html"
+                            class="continue-shopping"
+                        >
+                            Continue Shopping
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- CART SUMMARY -->
+                <aside class="cart-summary">
+
+                    <h2>
+                        Order Summary
+                    </h2>
+
+                    <div class="summary-row">
+
+                        <span>
+                            Items
+                        </span>
+
+                        <span id="summaryItems">
+                            0
+                        </span>
+
+                    </div>
+
+                    <div class="summary-row">
+
+                        <span>
+                            Subtotal
+                        </span>
+
+                        <span id="cartSubtotal">
+                            ₹0
+                        </span>
+
+                    </div>
+
+                    <div class="summary-row">
+
+                        <span>
+                            Shipping
+                        </span>
+
+                        <span>
+                            Free
+                        </span>
+
+                    </div>
+
+                    <div class="summary-divider"></div>
+
+                    <div class="summary-total">
+
+                        <span>
+                            Total
+                        </span>
+
+                        <strong id="cartTotal">
+                            ₹0
+                        </strong>
+
+                    </div>
+
+                    <a
+                        href="checkout.html"
+                        class="checkout-button"
+                    >
+                        Proceed to Checkout
+                    </a>
+
+                    <a
+                        href="products.html"
+                        class="continue-shopping-link"
+                    >
+                        Continue Shopping
+                    </a>
+
+                </aside>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+
+        <div class="container">
+
+            <div class="footer-content">
+
+                <div class="footer-brand">
+
+                    <h3>
+                        Velora
+                    </h3>
+
+                    <p>
+                        Modern products.
+                        Simple shopping.
+                    </p>
+
+                </div>
+
+                <div class="footer-links">
+
+                    <a href="products.html">
+                        Products
+                    </a>
+
+                    <a href="cart.html">
+                        Cart
+                    </a>
+
+                    <a href="checkout.html">
+                        Checkout
+                    </a>
+
+                </div>
+
+            </div>
+
+            <div class="footer-bottom">
+
+                <p>
+                    © 2026 Velora. All rights reserved.
+                </p>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>

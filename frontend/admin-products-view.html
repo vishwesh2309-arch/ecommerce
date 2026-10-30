@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Velora | Admin Dashboard</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Outfit:wght@600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/admin.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🛍️</text></svg>">
+</head>
+<body>
+    <div class="admin-layout">
+
+                <!-- SIDEBAR -->
+                <!-- MODERN PRO SIDEBAR -->
+        <aside class="admin-sidebar">
+            <div class="sidebar-top">
+                <a href="admin.html" class="admin-brand-wrapper">
+                    <div class="admin-logo-mark">
+                        <span>V</span>
+                    </div>
+                    <div class="admin-brand-text">
+                        <span class="admin-brand">VELORA</span>
+                        <span class="sidebar-caption">COMMERCE PRO</span>
+                    </div>
+                </a>
+
+                <div class="nav-section-label">MAIN NAVIGATION</div>
+
+                <nav class="admin-nav">
+                    <a class="nav-link " href="admin.html">
+                        <span class="nav-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="9"></rect><rect x="14" y="3" width="7" height="5"></rect><rect x="14" y="12" width="7" height="9"></rect><rect x="3" y="16" width="7" height="5"></rect></svg></span>
+                        <span class="nav-text">Dashboard</span>
+                    </a>
+                    <a class="nav-link active" href="admin-products-view.html">
+                        <span class="nav-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg></span>
+                        <span class="nav-text">Products</span>
+                    </a>
+                    <a class="nav-link " href="admin-orders-view.html">
+                        <span class="nav-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg></span>
+                        <span class="nav-text">Orders</span>
+                    </a>
+                    <a class="nav-link " href="admin-customers-view.html">
+                        <span class="nav-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg></span>
+                        <span class="nav-text">Customers</span>
+                    </a>
+                </nav>
+
+                <div class="nav-section-label" style="margin-top: 24px;">EXTERNAL</div>
+
+                <nav class="admin-nav">
+                    <a class="nav-link nav-link-store" href="index.html" target="_blank">
+                        <span class="nav-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg></span>
+                        <span class="nav-text">Live Storefront</span>
+                        <svg class="external-icon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                    </a>
+                </nav>
+            </div>
+
+            <div class="sidebar-footer">
+                <div class="admin-profile-pill">
+                    <div class="admin-avatar">AD</div>
+                    <div class="admin-info">
+                        <strong>Administrator</strong>
+                        <span class="status-indicator-online">● Online</span>
+                    </div>
+                </div>
+            </div>
+        </aside>
+        <!-- MAIN CONTENT -->
+        <main class="admin-main">
+
+            <!-- HEADER -->
+            <header class="admin-header">
+                <div>
+                    <p class="eyebrow">STORE MANAGEMENT</p>
+                    <h1>Products Management</h1>
+                    <p class="muted">Create, update, manage stock, and organize your product catalog.</p>
+                </div>
+
+                <a class="store-link" href="index.html" target="_blank">View Store ↗</a>
+            </header>
+<section id="products" class="panel">
+
+                <div class="section-heading">
+                    <div>
+                        <h2>Product Management</h2>
+                        <p class="muted">
+                            Add products, update details, or remove products from the active catalog.
+                        </p>
+                    </div>
+
+                    <button
+                        type="button"
+                        id="showAddProductBtn"
+                        class="btn btn-primary"
+                    >
+                        + Add Product
+                    </button>
+                </div>
+
+                <!-- ADD / EDIT PRODUCT FORM -->
+                <form id="productForm" class="product-form hidden" novalidate>
+
+                    <div class="form-heading">
+                        <h3 id="productFormTitle">Add New Product</h3>
+
+                        <button
+                            type="button"
+                            id="cancelProductFormBtn"
+                            class="btn btn-secondary"
+                        >
+                            Cancel
+                        </button>
+                    </div>
+
+                    <input type="hidden" id="editingProductId">
+
+                    <div class="form-grid">
+
+                        <div class="form-field">
+                            <label for="productNameInput">Product name *</label>
+                            <input
+                                id="productNameInput"
+                                type="text"
+                                maxlength="120"
+                                required
+                                placeholder="e.g. Cotton T-Shirt"
+                            >
+                        </div>
+
+                        <div class="form-field">
+                            <label for="productCategoryInput">Category *</label>
+
+                            <select id="productCategoryInput" required>
+                                <option value="">Choose category</option>
+                                <option value="Fashion">Fashion</option>
+                                <option value="Electronics">Electronics</option>
+                                <option value="Footwear">Footwear</option>
+                                <option value="Accessories">Accessories</option>
+                                <option value="Home">Home</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </div>
+
+                        <div class="form-field">
+                            <label for="productPriceInput">Price (₹) *</label>
+                            <input
+                                id="productPriceInput"
+                                type="number"
+                                min="0.01"
+                                step="0.01"
+                                required
+                                placeholder="799"
+                            >
+                        </div>
+
+                        <!-- PRODUCT IMAGE -->
+                        <div class="form-field full-width">
+                            <label for="productImageFile">Product Image *</label>
+
+                            <input
+                                id="productImageFile"
+                                type="file"
+                                accept="image/*"
+                            >
+
+                            <small>
+                                Select a photo from your computer. Supported formats depend on your browser.
+                            </small>
+
+                            <div
+                                id="productImagePreviewWrap"
+                                class="image-preview-wrap hidden"
+                            >
+                                <img
+                                    id="productImagePreview"
+                                    src=""
+                                    alt="Product image preview"
+                                >
+                            </div>
+
+                            <label for="productImageInput">
+                                Or use an existing project image path
+                            </label>
+
+                            <input
+                                id="productImageInput"
+                                type="text"
+                                maxlength="500"
+                                placeholder="images/products/product1.jpg"
+                            >
+
+                            <small>
+                                Choose a file above or enter an existing image path.
+                            </small>
+                        </div>
+
+                        <div class="form-field full-width">
+                            <label for="productDescriptionInput">Description *</label>
+
+                            <textarea
+                                id="productDescriptionInput"
+                                rows="3"
+                                maxlength="1000"
+                                required
+                                placeholder="Describe this product"
+                            ></textarea>
+                        </div>
+
+                    </div>
+
+                    <p
+                        id="productFormMessage"
+                        class="form-message"
+                        role="status"
+                    ></p>
+
+                    <div class="form-actions">
+                        <button
+                            type="submit"
+                            id="saveProductBtn"
+                            class="btn btn-primary"
+                        >
+                            Save Product
+                        </button>
+
+                        <button
+                            type="button"
+                            id="resetProductFormBtn"
+                            class="btn btn-secondary"
+                        >
+                            Clear Form
+                        </button>
+                    </div>
+
+                </form>
+
+                <!-- PRODUCT SEARCH AND FILTER -->
+                <div class="product-toolbar">
+
+                    <input
+                        id="productSearch"
+                        type="search"
+                        placeholder="Search by product name, ID or description"
+                    >
+
+                    <select
+                        id="productCategory"
+                        aria-label="Filter products by category"
+                    >
+                        <option value="all">All Categories</option>
+                    </select>
+
+                    <span id="catalogCount" class="catalog-count">
+                        0 products
+                    </span>
+
+                </div>
+
+                <div id="adminProductGrid" class="product-grid"></div>
+
+                <p id="emptyProductMessage" class="empty-message hidden">
+                    No products match your search.
+                </p>
+
+                <p class="catalog-note">
+                    Changes are stored in this browser's localStorage and shared
+                    with the customer shop on the same origin.
+                </p>
+
+            </section>
+
+            <!-- ORDER MANAGEMENT -->
+            </main>
+
+    </div>
+
+    <!-- ADMIN JAVASCRIPT -->
+     
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script src="js/admin.js"></script>
+
+</body>
+</html>

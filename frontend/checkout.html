@@ -1,0 +1,225 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Checkout | Velora</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🛍️</text></svg>">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="header">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">Velora</a>
+
+            <nav class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="products.html">Products</a>
+                <a href="wishlist.html">Wishlist</a>
+
+                <a href="cart.html" class="cart-icon"
+                   aria-label="Shopping cart">
+                    <span class="cart-symbol">🛒</span>
+                    <span class="cart-count" id="cart-count">0</span>
+                </a>
+
+                <a href="login.html">Login</a>
+                <a href="register.html">Register</a>
+                <a href="my-orders.html">My Orders</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- CHECKOUT HERO -->
+    <section class="checkout-page-hero">
+        <div class="container">
+            <p>SECURE CHECKOUT</p>
+            <h1>Checkout</h1>
+            <span>Complete your details to place your order.</span>
+        </div>
+    </section>
+
+    <!-- CHECKOUT -->
+    <section class="checkout-section">
+        <div class="container">
+
+            <div class="checkout-layout">
+
+                <!-- CUSTOMER DETAILS -->
+                <div class="checkout-form-section">
+                    <h2>Customer Information</h2>
+
+                    <form id="checkoutForm">
+
+                        <div class="form-group">
+                            <label for="fullName">Full Name</label>
+                            <input
+                                type="text"
+                                id="fullName"
+                                name="fullName"
+                                placeholder="Enter your full name"
+                                autocomplete="name"
+                                required
+                            >
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input
+                                type="email"
+                                id="email"
+                                name="email"
+                                placeholder="Enter your email address"
+                                autocomplete="email"
+                                required
+                            >
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input
+                                type="tel"
+                                id="phone"
+                                name="phone"
+                                placeholder="Enter your phone number"
+                                autocomplete="tel"
+                                required
+                            >
+                        </div>
+
+                        <div class="form-group">
+                            <label for="address">Delivery Address</label>
+                            <textarea
+                                id="address"
+                                name="address"
+                                rows="4"
+                                placeholder="Enter your delivery address"
+                                autocomplete="street-address"
+                                required
+                            ></textarea>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="city">City</label>
+                                <input
+                                    type="text"
+                                    id="city"
+                                    name="city"
+                                    placeholder="City"
+                                    autocomplete="address-level2"
+                                    required
+                                >
+                            </div>
+
+                            <div class="form-group">
+                                <label for="pincode">PIN Code</label>
+                                <input
+                                    type="text"
+                                    id="pincode"
+                                    name="pincode"
+                                    placeholder="6-digit PIN Code"
+                                    inputmode="numeric"
+                                    autocomplete="postal-code"
+                                    maxlength="6"
+                                    pattern="[0-9]{6}"
+                                    required
+                                >
+                            </div>
+                        </div>
+
+                        <!-- PAYMENT METHOD -->
+                        <div class="form-group velora-payment-section">
+                            <h2>Payment Method</h2>
+
+                            <label class="velora-payment-option"
+                                   for="paymentCOD">
+
+                                <input
+                                    type="radio"
+                                    id="paymentCOD"
+                                    name="paymentMethod"
+                                    value="COD"
+                                    checked
+                                    required
+                                >
+
+                                <span>
+                                    <strong>Cash on Delivery (COD)</strong>
+                                    <span>
+                                        Pay for your order when it arrives.
+                                    </span>
+                                </span>
+
+                            </label>
+
+                            <p class="velora-payment-note">
+                                No online payment is required at checkout.
+                                Payment is due upon delivery.
+                            </p>
+                        </div>
+
+                        <button
+                            type="submit"
+                            class="checkout-btn"
+                            id="placeOrderBtn"
+                        >
+                            Place Order — Cash on Delivery
+                        </button>
+
+                    </form>
+                </div>
+
+                <!-- ORDER SUMMARY -->
+                <div class="checkout-summary">
+                    <h2>Order Summary</h2>
+
+                    <div id="checkoutItems">
+                        <!-- Rendered by js/script.js -->
+                    </div>
+
+                    <div class="checkout-summary-row">
+                        <span>Subtotal</span>
+                        <strong id="checkoutSubtotal">₹0</strong>
+                    </div>
+
+                    <div class="checkout-summary-row">
+                        <span>Delivery</span>
+                        <strong>Free</strong>
+                    </div>
+
+                    <div class="checkout-summary-divider"></div>
+
+                    <div class="checkout-summary-total">
+                        <span>Total to Pay on Delivery</span>
+                        <strong id="checkoutTotal">₹0</strong>
+                    </div>
+
+                    <p class="velora-payment-note">
+                        Your payment will remain pending until it is
+                        collected upon delivery.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <p>© 2026 Velora. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- EXISTING JAVASCRIPT -->
+    <script src="js/script.js"></script>
+
+</body>
+</html>

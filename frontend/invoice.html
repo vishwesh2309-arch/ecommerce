@@ -1,0 +1,213 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Invoice | Velora</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        .invoice-page {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 30px;
+            background: #fff;
+            color: #222;
+            border: 1px solid #e5e5e5;
+            border-radius: 10px;
+        }
+
+        .invoice-header {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            flex-wrap: wrap;
+            padding-bottom: 22px;
+            border-bottom: 2px solid #222;
+        }
+
+        .invoice-brand h1 {
+            margin: 0;
+            font-size: 30px;
+            letter-spacing: 2px;
+        }
+
+        .invoice-brand p,
+        .invoice-meta p {
+            margin: 7px 0;
+        }
+
+        .invoice-title {
+            margin: 28px 0 18px;
+            font-size: 26px;
+        }
+
+        .invoice-info-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 22px;
+            margin-bottom: 28px;
+        }
+
+        .invoice-info-box {
+            padding: 16px;
+            background: #f7f7f7;
+            border-radius: 6px;
+            overflow-wrap: anywhere;
+        }
+
+        .invoice-info-box h3 {
+            margin-top: 0;
+        }
+
+        .invoice-info-box p {
+            margin: 7px 0;
+        }
+
+        .invoice-table-wrap {
+            width: 100%;
+            overflow-x: auto;
+        }
+
+        .invoice-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0 25px;
+        }
+
+        .invoice-table th,
+        .invoice-table td {
+            padding: 12px 10px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .invoice-table th {
+            background: #f2f2f2;
+        }
+
+        .invoice-table .number {
+            text-align: right;
+            white-space: nowrap;
+        }
+
+        .invoice-total {
+            width: min(100%, 350px);
+            margin-left: auto;
+        }
+
+        .invoice-total-row {
+            display: flex;
+            justify-content: space-between;
+            gap: 16px;
+            padding: 9px 0;
+        }
+
+        .invoice-grand-total {
+            border-top: 2px solid #222;
+            margin-top: 6px;
+            padding-top: 14px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .invoice-footer {
+            margin-top: 35px;
+            padding-top: 18px;
+            border-top: 1px solid #ddd;
+            text-align: center;
+            color: #555;
+        }
+
+        .invoice-actions {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin: 20px auto 40px;
+        }
+
+        .invoice-actions button {
+            padding: 11px 20px;
+            cursor: pointer;
+        }
+
+        .invoice-message {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 20px;
+            text-align: center;
+        }
+
+        @media (max-width: 600px) {
+            .invoice-page {
+                margin: 15px;
+                padding: 16px;
+            }
+
+            .invoice-info-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .invoice-table th,
+            .invoice-table td {
+                padding: 9px 6px;
+                font-size: 13px;
+            }
+        }
+
+        @media print {
+            body {
+                background: #fff !important;
+            }
+
+            .invoice-page {
+                max-width: none;
+                margin: 0;
+                padding: 0;
+                border: none;
+                border-radius: 0;
+            }
+
+            .invoice-actions {
+                display: none !important;
+            }
+
+            .invoice-info-box,
+            .invoice-table th {
+                background: #f2f2f2 !important;
+                print-color-adjust: exact;
+                -webkit-print-color-adjust: exact;
+            }
+
+            @page {
+                size: A4;
+                margin: 15mm;
+            }
+        }
+    </style>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🛍️</text></svg>">
+</head>
+
+<body>
+
+    <main class="invoice-page" id="invoicePage">
+        <p>Loading invoice...</p>
+    </main>
+
+    <div class="invoice-actions" id="invoiceActions" style="display: none;">
+        <button type="button" onclick="window.print()">
+            Print / Save as PDF
+        </button>
+
+        <button type="button" onclick="window.location.href='my-orders.html'">
+            Back to My Orders
+        </button>
+    </div>
+
+    <script src="js/invoice.js?v=2" defer></script>
+</body>
+</html>

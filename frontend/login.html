@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Login | Velora</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🛍️</text></svg>">
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+    <header class="site-header">
+
+        <div class="container header-container">
+
+            <a href="index.html" class="logo">VELORA</a>
+
+            <nav class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="products.html">Shop</a>
+                <a href="index.html#categories">Categories</a>
+                <a href="index.html#about">About</a>
+                <a href="index.html#contact">Contact</a>
+                <a href="my-orders.html">My Orders</a>
+            </nav>
+
+            <div class="header-actions">
+
+                <a href="products.html"
+                   class="search-icon"
+                   aria-label="Search">
+                    🔍
+                </a>
+
+                <a href="cart.html"
+                   class="cart-icon"
+                   aria-label="Shopping cart">
+                    🛒
+                    <span class="cart-count">0</span>
+                </a>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- ================= LOGIN ================= -->
+    <main class="auth-section">
+
+        <div class="auth-card">
+
+            <div class="auth-heading">
+
+                <p class="auth-eyebrow">
+                    WELCOME BACK
+                </p>
+
+                <h1>
+                    Login
+                </h1>
+
+                <p>
+                    Sign in to continue shopping with Velora.
+                </p>
+
+            </div>
+
+
+            <!-- LOGIN FORM -->
+
+            <form
+                id="loginForm"
+                class="auth-form"
+                novalidate
+            >
+
+                <!-- EMAIL -->
+
+                <label for="loginEmail">
+                    Email address
+                </label>
+
+                <input
+                    type="email"
+                    id="loginEmail"
+                    name="email"
+                    autocomplete="email"
+                    maxlength="255"
+                    placeholder="you@example.com"
+                    required
+                >
+
+
+                <!-- PASSWORD -->
+
+                <label for="loginPassword">
+                    Password
+                </label>
+
+                <div class="password-wrapper">
+
+                    <input
+                        type="password"
+                        id="loginPassword"
+                        name="password"
+                        autocomplete="current-password"
+                        minlength="8"
+                        placeholder="Enter your password"
+                        required
+                    >
+
+                    <button
+                        type="button"
+                        class="password-toggle"
+                        id="toggleLoginPassword"
+                        aria-label="Show password"
+                    >
+                        👁
+                    </button>
+
+                </div>
+
+
+                <!-- LOGIN MESSAGE -->
+
+                <p
+                    id="loginMessage"
+                    class="auth-message"
+                    aria-live="polite"
+                ></p>
+
+
+                <!-- LOGIN BUTTON -->
+
+                <button
+                    type="submit"
+                    class="auth-submit"
+                >
+                    Login
+                </button>
+
+            </form>
+
+
+            <!-- REGISTER LINK -->
+
+            <p class="auth-switch">
+
+                Don't have an account?
+
+                <a href="register.html">
+                    Create Account
+                </a>
+
+            </p>
+
+        </div>
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="site-footer">
+
+        <div class="container">
+
+            <div class="footer-bottom">
+
+                <p>
+                    © 2026 Velora. All rights reserved.
+                </p>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <!-- ================= JAVASCRIPT ================= -->
+
+    <script src="js/script.js"></script>
+    <script src="js/login.js"></script>
+
+</body>
+
+</html>

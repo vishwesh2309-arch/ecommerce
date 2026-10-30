@@ -1,0 +1,11 @@
+# Velora Ecommerce - Git Ignore File
+
+# Sensitive Credentials & Local Config
+backend/config/.env.php
+
+# Operating System & IDE Files
+.DS_Store
+Thumbs.db
+*.log
+.vscode/
+.idea/

@@ -1,0 +1,17 @@
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /velora-ecommerce/
+
+    # 1. Route API requests: /api/* -> backend/api/*
+    RewriteRule ^api/(.*)$ backend/api/$1 [L,QSA]
+
+    # 2. Route root / to frontend/index.html
+    RewriteRule ^$ frontend/index.html [L,R=302]
+
+    # 3. Transparently rewrite any root request for an HTML file or asset into frontend/
+    RewriteCond %{REQUEST_URI} !^/velora-ecommerce/frontend/
+    RewriteCond %{REQUEST_URI} !^/velora-ecommerce/backend/
+    RewriteCond %{DOCUMENT_ROOT}/velora-ecommerce/frontend/$1 -f [OR]
+    RewriteCond %{DOCUMENT_ROOT}/velora-ecommerce/frontend/$1 -d
+    RewriteRule ^(.*)$ frontend/$1 [L,QSA]
+</IfModule>
